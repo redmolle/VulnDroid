@@ -13,6 +13,15 @@
     <string name="btn_text">ClickMe</string>
     <string name="flag">Enter your flag here!</string>
     <string name="submit">Submit</string>
+    <!--
+        Проблема: Прямое хранение флага {flag:Strings.xml_Cracked}
+
+        CWE: 256
+
+        Источники: https://github.com/PositiveTechnologies/PT.Doc/blob/master/CWE-List/CWE-List.md
+
+        Пример исправления: Исключить эту строку из всех xml-структур в проекте
+    -->
     <string name="HardcodingDetails">"{flag:Strings.xml_Cracked}"</string>
     <string name="score">"Your current score is: "</string>
     <string name="score1">"SCORE!!"</string>

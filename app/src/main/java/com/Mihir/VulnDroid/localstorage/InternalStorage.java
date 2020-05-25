@@ -59,7 +59,14 @@ public class InternalStorage extends AppCompatActivity {
             }
         });
     }
-
+            // Проблема: Функция бесполезная для работоспособности приложения, но создает текстовый файл,
+            // в который помещает флаг Flag={flag:InternalStorage_Cracked}
+            //
+            // CWE: 256
+            //
+            // Источники: https://github.com/PositiveTechnologies/PT.Doc/blob/master/CWE-List/CWE-List.md
+            //
+            // Пример исправления: Исключить данный метод из кода
             private void writeFile() throws Exception {
                 String FILENAME = "flag.txt";
                 String flag = "";
